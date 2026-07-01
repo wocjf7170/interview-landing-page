@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* 스티키 헤더 높이만큼 앵커 이동 위치를 보정한다 */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-cream text-ink antialiased;
+    font-feature-settings: 'tnum';
+  }
+
+  /* 키보드 포커스 가시성 (접근성) */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-cream rounded;
+  }
+}
+
+@layer components {
+  /* 반복 사용하는 버튼 스타일 묶음 */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-base font-semibold text-white shadow-lift transition hover:bg-brand-700 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-3 text-base font-semibold text-stone-700 transition hover:border-brand-300 hover:text-brand-700;
+  }
+}
