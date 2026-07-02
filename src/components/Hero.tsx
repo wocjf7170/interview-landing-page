@@ -1,5 +1,6 @@
 import Container from './ui/Container'
-import { IconArrowRight, IconCheck, IconVideo, IconShield, IconMapPin } from './icons'
+import StickyNote from './ui/StickyNote'
+import { IconArrowRight, IconCheck, IconVideo, IconShield, IconMapPin, IconSquiggle } from './icons'
 
 export default function Hero() {
   return (
@@ -17,18 +18,21 @@ export default function Hero() {
       <Container className="relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:gap-8 lg:py-28">
         {/* 카피 */}
         <div className="animate-fade-up text-center lg:text-left">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-4 py-1.5 text-sm font-semibold text-brand-700">
-            <span className="h-2 w-2 rounded-full bg-accent-500" />
+          <span className="inline-flex -rotate-1 items-center gap-2 rounded-full bg-note-yellow px-4 py-1.5 text-sm font-bold text-ink/80 shadow-sm">
+            <span className="h-2 w-2 rounded-full bg-brand-500" />
             취준생 모의면접 모임
           </span>
 
-          <h1 className="mt-6 text-4xl font-extrabold leading-[1.15] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="mt-6 font-display text-4xl leading-[1.2] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
             거울 보고 하는 면접 연습,
             <br />
-            <span className="text-brand-600">실전에선 왜 안 될까요?</span>
+            <span className="relative inline-block text-brand-600">
+              실전에선 왜 안 될까요?
+              <IconSquiggle className="absolute -bottom-2 left-0 h-3 w-full text-accent-500" />
+            </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-stone-600 lg:mx-0">
+          <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-stone-600 lg:mx-0">
             실제 사람 앞에서 말해봐야 늡니다.
             같은 목표의 사람들과 모의면접 상대를 매칭해드려요 — 화상이나 미리 잡아둔 면접장에서 실전처럼.
           </p>
@@ -56,8 +60,16 @@ export default function Hero() {
           </ul>
         </div>
 
-        {/* 모집 현황 방 카드 목업 */}
-        <div className="animate-fade-up [animation-delay:120ms]">
+        {/* 모집 현황 방 카드 목업 + 응원 포스트잇 */}
+        <div className="animate-fade-up [animation-delay:120ms] relative">
+          {/* 시그니처 — 벽에 붙은 응원 메모 */}
+          <StickyNote
+            color="yellow"
+            tilt="rotate-6"
+            className="absolute -right-1 -top-6 z-10 sm:-right-4 sm:-top-8"
+          >
+            오늘도 화이팅! 🙌
+          </StickyNote>
           <RoomMockup />
         </div>
       </Container>
@@ -108,7 +120,7 @@ function RoomMockup() {
           {['🙂', '😀', '🤓'].map((face, i) => (
             <span
               key={i}
-              className="grid h-9 w-9 place-items-center rounded-full bg-white text-lg shadow-sm ring-2 ring-brand-100"
+              className="grid h-9 w-9 cursor-default place-items-center rounded-full bg-white text-lg shadow-sm ring-2 ring-brand-100 transition hover:animate-wiggle hover:ring-brand-300"
             >
               {face}
             </span>

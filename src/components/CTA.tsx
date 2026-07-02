@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import Container from './ui/Container'
+import StickyNote from './ui/StickyNote'
 import { IconCheck } from './icons'
 
 // 백엔드가 없는 정적 사이트이므로, 사전 신청은 클라이언트에서만 동작한다.
@@ -37,7 +38,12 @@ export default function CTA() {
           />
 
           <div className="relative mx-auto max-w-xl">
-            <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl">
+            <StickyNote color="yellow" tilt="-rotate-3" className="mb-6">
+              떨려도 괜찮아,
+              <br />
+              같이니까 🤞
+            </StickyNote>
+            <h2 className="font-display text-3xl leading-tight tracking-tight text-white sm:text-4xl">
               첫 모임, 가장 먼저 함께해요 🙌
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-brand-100">

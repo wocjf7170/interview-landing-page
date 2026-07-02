@@ -138,3 +138,27 @@ export function IconClock({ className = base }: IconProps) {
     </svg>
   )
 }
+
+// 손으로 그은 듯한 밑줄 — 강조 문구 아래 시그니처 포인트.
+// preserveAspectRatio="none"으로 문구 너비에 맞춰 늘어난다.
+export function IconSquiggle({ className = base }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 200 14" fill="none" preserveAspectRatio="none" aria-hidden="true">
+      <path
+        d="M3 9c22-6 44-6 66-2 22 4 44 6 66 1 22-5 44-6 62-2"
+        stroke="currentColor"
+        strokeWidth={5}
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+// 손그림 별 — 응원·강조용 작은 장식.
+export function IconStar({ className = base }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2.5c.5 3.4 1.8 4.8 5.2 5.3-3.4.5-4.7 1.9-5.2 5.3-.5-3.4-1.8-4.8-5.2-5.3 3.4-.5 4.7-1.9 5.2-5.3z" />
+    </svg>
+  )
+}

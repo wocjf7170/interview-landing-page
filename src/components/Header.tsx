@@ -17,10 +17,10 @@ export default function Header() {
       <Container className="flex h-16 items-center justify-between">
         {/* 로고 */}
         <a href="#top" className="flex items-center gap-2" aria-label="마주 홈으로">
-          <span className="grid h-8 w-8 place-items-center rounded-xl bg-brand-600 text-sm font-bold text-white">
+          <span className="grid h-8 w-8 -rotate-3 place-items-center rounded-xl bg-brand-600 font-display text-base text-white">
             마
           </span>
-          <span className="text-lg font-bold tracking-tight text-ink">마주</span>
+          <span className="font-display text-xl tracking-tight text-ink">마주</span>
         </a>
 
         {/* 데스크톱 내비게이션 */}

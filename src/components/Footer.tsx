@@ -13,10 +13,10 @@ export default function Footer() {
       <Container className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-start">
         <div className="text-center sm:text-left">
           <a href="#top" className="flex items-center justify-center gap-2 sm:justify-start">
-            <span className="grid h-8 w-8 place-items-center rounded-xl bg-brand-600 text-sm font-bold text-white">
+            <span className="grid h-8 w-8 -rotate-3 place-items-center rounded-xl bg-brand-600 font-display text-base text-white">
               마
             </span>
-            <span className="text-lg font-bold tracking-tight text-ink">마주</span>
+            <span className="font-display text-xl tracking-tight text-ink">마주</span>
           </a>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-stone-500">
             방을 열고 같이 모여 연습하는, 취준생 모의면접 모임 서비스.

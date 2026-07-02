@@ -19,11 +19,12 @@ export default function SectionHeading({
   return (
     <div className={`max-w-2xl ${alignment}`}>
       {eyebrow && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand-600">
+        <span className="mb-4 inline-flex -rotate-1 items-center gap-1.5 rounded-full bg-note-yellow px-3.5 py-1 text-sm font-bold text-ink/80 shadow-sm">
+          <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />
           {eyebrow}
-        </p>
+        </span>
       )}
-      <h2 className="text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl">
+      <h2 className="font-display text-3xl leading-tight tracking-tight text-ink sm:text-4xl">
         {title}
       </h2>
       {description && (
